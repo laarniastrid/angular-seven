@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Hero } from '../classes/hero';
 
 @Component({
-  selector: 'app-hero-detail',
-  templateUrl: './hero-detail.component.html',
-  styleUrls: ['./hero-detail.component.sass']
+	selector: 'hero-detail',
+	templateUrl: './hero-detail.component.html',
+	styleUrls: ['./hero-detail.component.sass']
 })
 export class HeroDetailComponent implements OnInit {
+	@Input() hero: Hero;
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 }
