@@ -12,6 +12,9 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroService } from './services/hero.service';
 import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
 	declarations: [
@@ -19,6 +22,7 @@ import { MessagesComponent } from './messages/messages.component';
 		HeroesComponent,
 		HeroDetailComponent,
 		MessagesComponent,
+		DashboardComponent,
 	],
 	imports: [
 		AngularFireModule.initializeApp(environment.firebase),
@@ -26,11 +30,14 @@ import { MessagesComponent } from './messages/messages.component';
 		AngularFireAuthModule,
 		BrowserModule,
 		FormsModule,
+		AppRoutingModule,
+		RouterModule,
 	],
 	providers: [
 		HeroService,
 	],
 	bootstrap: [
-		AppComponent,]
+		AppComponent,
+	]
 })
 export class AppModule { }

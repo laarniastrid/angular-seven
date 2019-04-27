@@ -136,5 +136,10 @@
       }
     }
   },
-  "defaultProject": "angular-seven"
+  "defaultProject": "angular-seven",
+  "schematics": {
+    "@schematics/angular:components": {
+      "styleext": "scss"
+    }
+  }
 }
